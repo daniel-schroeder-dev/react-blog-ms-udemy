@@ -8,16 +8,22 @@ import BlogCard from './components/BlogCard/BlogCard';
 
 import './App.css';
 
-function App() {
-  return (
-    <main className="app">
-      <div className="app__blog-card-container">
-        <BlogCard src={cupcakes} />
-        <BlogCard src={doctor} />
-        <BlogCard src={elf} />
-      </div>
-    </main>
-  );
+const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <main className="app">
+        <div className="app__blog-card-container">
+          <BlogCard src={cupcakes} />
+          <BlogCard src={doctor} />
+          <BlogCard src={elf} />
+        </div>
+      </main>
+    );  
+  }
+  
 }
 
 export default App;
