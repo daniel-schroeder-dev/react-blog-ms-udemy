@@ -15,7 +15,7 @@ function BlogCard(props) {
       <img className="blog-card__img" src={props.src} alt="random unsplash" />
       <div className="blog-card__info">
         <h2 className="blog-card__title">{props.title}</h2>
-        <h3 className="blog-card__category">Category</h3>
+        <h3 className="blog-card__category">{props.category}</h3>
         <p className="blog-card__body">{props.body}</p>
         <p className="blog-card__author">{props.author}</p>
       </div>

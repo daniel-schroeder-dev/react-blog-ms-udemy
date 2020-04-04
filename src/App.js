@@ -10,11 +10,13 @@ import BlogPost from './components/BlogPost/BlogPost';
 import './App.css';
 
 const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
+// eslint-disable-next-line
+const imgAPIURL = 'https://source.unsplash.com/random/800x600';
 
 const authors = [
-  'Bob Worth',
-  'Daniel Schroeder',
-  'Ted Long',
+  'Ada Lovelace',
+  'Grace Hopper',
+  'Leslie Knope',
 ];
 
 class App extends React.Component {
@@ -39,6 +41,7 @@ class App extends React.Component {
           title: posts[0].title.substring(0, 8),
           body: posts[0].body.substring(0, 100) + '...',
           src: doctor,
+          category: 'Science',
         },
         {
           id: posts[10].id,
@@ -46,6 +49,7 @@ class App extends React.Component {
           title: posts[10].title.substring(0, 12),
           body: posts[10].body.substring(0, 100) + '...',
           src: cupcakes,
+          category: 'Literature',
         },
         {
           id: posts[20].id,
@@ -53,6 +57,7 @@ class App extends React.Component {
           title: posts[20].title.substring(0, 5),
           body: posts[20].body.substring(0, 100) + '...',
           src: elf,
+          category: 'Health',
         },
       ]
     });
@@ -71,6 +76,7 @@ class App extends React.Component {
         </div>
         <div className="app__blog-post-container">
           <BlogPost />
+
         </div>
       </main>
     );  
