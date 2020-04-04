@@ -1,0 +1,11 @@
+.app {
+  margin-top: 24px;
+  /*border: 1px solid red;*/
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.app__blog-card-container {
+  display: flex;
+  justify-content: space-between;
+}
