@@ -58,13 +58,15 @@ class App extends React.Component {
   };
 
   render() {
+
+    const posts = this.state.posts.map(post => (
+      <BlogCard key={post.id} {...post} />
+    ));
     
     return (
       <main className="app">
         <div className="app__blog-card-container">
-          { this.state.posts.map(post => (
-            <BlogCard key={post.id} {...post} />
-            ))}
+          { posts.length ? posts : null }
         </div>
       </main>
     );  
