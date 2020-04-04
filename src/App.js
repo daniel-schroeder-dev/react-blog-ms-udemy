@@ -63,10 +63,14 @@ class App extends React.Component {
     });
   };
 
+  handleLoadPost = id => {
+    console.log(id);
+  };
+
   render() {
 
     const posts = this.state.posts.map(post => (
-      <BlogCard key={post.id} {...post} />
+      <BlogCard key={post.id} {...post} onClick={() => this.handleLoadPost(post.id)} />
     ));
     
     return (

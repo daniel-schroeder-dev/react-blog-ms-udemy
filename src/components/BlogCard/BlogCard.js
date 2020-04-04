@@ -11,7 +11,7 @@ import './BlogCard.css';
 
 function BlogCard(props) {
   return (
-    <div className="blog-card">
+    <div className="blog-card" onClick={props.onClick}>
       <img className="blog-card__img" src={props.src} alt="random unsplash" />
       <div className="blog-card__info">
         <h2 className="blog-card__title">{props.title}</h2>
