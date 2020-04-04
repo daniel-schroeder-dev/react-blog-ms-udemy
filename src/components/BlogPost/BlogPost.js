@@ -1,21 +1,29 @@
 import React from 'react';
 import './BlogPost.css';
 
+// title: post.title,
+// body: post.body,
+// author: authors[post.userId - 1],
+// category: 'Fitness',
+// date: 'October 27, 2012',
+// authorImg: 'https://randomuser.me/api/portraits/men/42.jpg',
+// postImg: doctor,
+
 function BlogPost(props) {
   return (
     <div className="blog-post">
-      <h2 className="blog-post__title">Be A Man</h2>
+      <h2 className="blog-post__title">{props.title}</h2>
       <div className="blog-post__info-box">
-        <img className="info-box__img" src="https://source.unsplash.com/random/800x600" alt="random" />
+        <img className="info-box__img" src={props.postImg} alt="random" />
         <div className="info-box__user-box">
           <div className="user-box__content-wrapper">
-            <h3 className="user-box__category">Fitness</h3>
+            <h3 className="user-box__category">{props.category}</h3>
           </div>
           <div className="user-box__content-wrapper">
             <div className="user-box__user-info">
-              <img className="user-info__img" src="https://randomuser.me/api/portraits/men/42.jpg" alt="random user" />
-              <p className="user-info__author">Ron Swanson</p>
-              <p className="user-info__date">October 27, 2012</p>
+              <img className="user-info__img" src={props.authorImg} alt="random user" />
+              <p className="user-info__author">{props.author}</p>
+              <p className="user-info__date">{props.date}</p>
             </div>
           </div>
         </div>

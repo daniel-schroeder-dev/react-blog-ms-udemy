@@ -23,6 +23,7 @@ class App extends React.Component {
 
   state = {
     posts: [],
+    post: null,
   };
 
   componentDidMount() {
@@ -64,7 +65,21 @@ class App extends React.Component {
   };
 
   handleLoadPost = id => {
-    console.log(id);
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then(response => response.json())
+      .then(post => this.setState({ post: this.formatPost(post) }))
+      .catch(console.error);
+  };
+
+  formatPost = post => {
+    return {
+      title: post.title.substring(0, post.id),
+      author: authors[post.userId - 1],
+      category: 'Fitness',
+      date: 'October 27, 2012',
+      authorImg: 'https://randomuser.me/api/portraits/men/42.jpg',
+      postImg: doctor,
+    };
   };
 
   render() {
@@ -79,8 +94,7 @@ class App extends React.Component {
           { posts.length ? posts : null }
         </div>
         <div className="app__blog-post-container">
-          <BlogPost />
-
+          { this.state.post ? <BlogPost {...this.state.post} /> : null }
         </div>
       </main>
     );  
