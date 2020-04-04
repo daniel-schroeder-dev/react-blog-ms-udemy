@@ -5,6 +5,7 @@ import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
 import BlogCard from './components/BlogCard/BlogCard';
+import BlogPost from './components/BlogPost/BlogPost';
 
 import './App.css';
 
@@ -67,6 +68,9 @@ class App extends React.Component {
       <main className="app">
         <div className="app__blog-card-container">
           { posts.length ? posts : null }
+        </div>
+        <div className="app__blog-post-container">
+          <BlogPost />
         </div>
       </main>
     );  

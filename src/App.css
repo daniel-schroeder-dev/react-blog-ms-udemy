@@ -6,6 +6,8 @@
 }
 
 .app__blog-card-container {
+  border: 1px solid cyan;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }

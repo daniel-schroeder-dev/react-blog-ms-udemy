@@ -1,11 +1,15 @@
 .blog-card {
-  /*border: 1px solid blue;*/
+  border: 1px solid blue;
+  margin: 12px 0;
   width: 30%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
+
+.blog-card
 
 .blog-card__img {
   width: 100%;
@@ -20,7 +24,7 @@
   position: absolute;
   background-color: #F5F5F5;
   width: 90%;
-  bottom: -170px;
+  bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
