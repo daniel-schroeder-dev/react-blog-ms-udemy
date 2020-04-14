@@ -73,7 +73,7 @@ class App extends React.Component {
 
   formatPost = post => {
     return {
-      title: post.title.substring(0, post.id),
+      title: post.title.substring(0, Math.floor(Math.random() * 10 + 10)),
       author: authors[post.userId - 1],
       category: 'Fitness',
       date: 'October 27, 2012',
