@@ -11,7 +11,7 @@ function NavBar(props) {
           <NavLink className="nav-bar__nav-link" to="/" exact>Home</NavLink>
         </li>
         <li className="nav-bar__nav-item">
-          <NavLink className="nav-bar__nav-link" to="/posts">Blog</NavLink>
+          <NavLink className="nav-bar__nav-link" to="/posts" exact>Blog</NavLink>
         </li>
       </ul>
     </nav>
