@@ -4,6 +4,8 @@ import cupcakes from './assets/cupcakes.jpeg';
 import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
+import BlogsPage from './pages/BlogsPage/BlogsPage';
+
 import BlogCard from './components/BlogCard/BlogCard';
 import BlogPost from './components/BlogPost/BlogPost';
 
@@ -90,9 +92,7 @@ class App extends React.Component {
     
     return (
       <main className="app">
-        <div className="app__blog-card-container">
-          { posts.length ? posts : null }
-        </div>
+        <BlogsPage posts={posts} />
         <div className="app__blog-post-container">
           { this.state.post ? <BlogPost {...this.state.post} /> : null }
         </div>
