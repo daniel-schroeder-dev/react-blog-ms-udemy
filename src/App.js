@@ -5,9 +5,9 @@ import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
 import BlogsPage from './pages/BlogsPage/BlogsPage';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 import BlogCard from './components/BlogCard/BlogCard';
-import BlogPost from './components/BlogPost/BlogPost';
 
 import './App.css';
 
@@ -93,9 +93,7 @@ class App extends React.Component {
     return (
       <main className="app">
         <BlogsPage posts={posts} />
-        <div className="app__blog-post-container">
-          { this.state.post ? <BlogPost {...this.state.post} /> : null }
-        </div>
+        <BlogPage post={this.state.post} />
       </main>
     );  
   }
