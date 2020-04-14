@@ -10,7 +10,6 @@ import BlogsPage from './pages/BlogsPage/BlogsPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 
 import NavBar from './components/NavBar/NavBar';
-import BlogCard from './components/BlogCard/BlogCard';
 
 import './App.css';
 
@@ -89,10 +88,6 @@ class App extends React.Component {
 
   render() {
 
-    const posts = this.state.posts.map(post => (
-      <BlogCard key={post.id} {...post} onClick={() => this.handleLoadPost(post.id)} />
-    ));
-    
     return (
       <main className="app">
         <NavBar />
@@ -101,7 +96,7 @@ class App extends React.Component {
             <HomePage />
           </Route>
           <Route path="/posts">
-            <BlogsPage posts={posts} />
+            <BlogsPage posts={this.state.posts} handleLoadPost={this.handleLoadPost} />
           </Route>
           <Route path="/posts/:id">
             <BlogPage post={this.state.post} />
