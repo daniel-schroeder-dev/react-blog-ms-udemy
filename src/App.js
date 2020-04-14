@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import cupcakes from './assets/cupcakes.jpeg';
 import doctor from './assets/doctor.jpeg';
@@ -95,9 +96,17 @@ class App extends React.Component {
     return (
       <main className="app">
         <NavBar />
-        <HomePage />
-        <BlogsPage posts={posts} />
-        <BlogPage post={this.state.post} />
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/posts">
+            <BlogsPage posts={posts} />
+          </Route>
+          <Route path="/posts/:id">
+            <BlogPage post={this.state.post} />
+          </Route>
+        </Switch>
       </main>
     );  
   }
