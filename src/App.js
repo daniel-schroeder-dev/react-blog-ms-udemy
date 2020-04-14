@@ -4,6 +4,7 @@ import cupcakes from './assets/cupcakes.jpeg';
 import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
+import HomePage from './pages/HomePage/HomePage';
 import BlogsPage from './pages/BlogsPage/BlogsPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 
@@ -94,6 +95,7 @@ class App extends React.Component {
     return (
       <main className="app">
         <NavBar />
+        <HomePage />
         <BlogsPage posts={posts} />
         <BlogPage post={this.state.post} />
       </main>
