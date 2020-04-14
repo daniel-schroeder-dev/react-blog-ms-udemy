@@ -5,9 +5,9 @@ import cupcakes from './assets/cupcakes.jpeg';
 import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
+import BlogSubLayout from './layouts/BlogSubLayout/BlogSubLayout'
+
 import HomePage from './pages/HomePage/HomePage';
-import BlogsPage from './pages/BlogsPage/BlogsPage';
-import BlogPage from './pages/BlogPage/BlogPage';
 
 import NavBar from './components/NavBar/NavBar';
 
@@ -22,6 +22,7 @@ const authors = [
   'Grace Hopper',
   'Leslie Knope',
 ];
+
 
 class App extends React.Component {
 
@@ -68,12 +69,12 @@ class App extends React.Component {
     });
   };
 
-  handleLoadPost = id => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then(response => response.json())
-      .then(post => this.setState({ post: this.formatPost(post) }))
-      .catch(console.error);
-  };
+  // handleLoadPost = id => {
+  //   fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  //     .then(response => response.json())
+  //     .then(post => this.setState({ post: this.formatPost(post) }))
+  //     .catch(console.error);
+  // };
 
   formatPost = post => {
     return {
@@ -96,10 +97,11 @@ class App extends React.Component {
             <HomePage />
           </Route>
           <Route path="/posts">
-            <BlogsPage posts={this.state.posts} handleLoadPost={this.handleLoadPost} />
-          </Route>
-          <Route path="/posts/:id">
-            <BlogPage post={this.state.post} />
+            <BlogSubLayout 
+              posts={this.state.posts} 
+              post={this.state.post} 
+              handleLoadPost={this.handleLoadPost}
+              />
           </Route>
         </Switch>
       </main>

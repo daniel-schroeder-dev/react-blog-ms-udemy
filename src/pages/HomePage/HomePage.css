@@ -1,0 +1,12 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page__description {
+  max-width: 500px;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: .5px;
+}

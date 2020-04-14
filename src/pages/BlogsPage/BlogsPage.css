@@ -1,6 +1,19 @@
 .blogs-page {
-  width: 1200px;
+  /*border: 1px solid blue;*/
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogs-page__blog-link {
+  color: inherit;
+}
+
+.blogs-page__blog-list {
+  /*border: 1px solid green;*/
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }

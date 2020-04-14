@@ -6,12 +6,12 @@ import './NavBar.css';
 function NavBar(props) {
   return (
     <nav className="nav-bar">
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
+      <ul className="nav-bar__nav-list">
+        <li className="nav-bar__nav-item">
+          <NavLink className="nav-bar__nav-link" to="/" exact>Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/posts">Blog</NavLink>
+        <li className="nav-bar__nav-item">
+          <NavLink className="nav-bar__nav-link" to="/posts">Blog</NavLink>
         </li>
       </ul>
     </nav>
