@@ -7,6 +7,7 @@ import elf from './assets/elf.jpeg';
 import BlogsPage from './pages/BlogsPage/BlogsPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 
+import NavBar from './components/NavBar/NavBar';
 import BlogCard from './components/BlogCard/BlogCard';
 
 import './App.css';
@@ -92,6 +93,7 @@ class App extends React.Component {
     
     return (
       <main className="app">
+        <NavBar />
         <BlogsPage posts={posts} />
         <BlogPage post={this.state.post} />
       </main>
