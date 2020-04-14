@@ -30,11 +30,11 @@ function BlogPage(props) {
   const formatPost = post => {
     return {
       title: post.title.substring(0, Math.floor(Math.random() * 10 + 10)),
-      author: authors[post.userId - 1],
+      author: authors[post.id - 1],
       category: 'Fitness',
       date: 'October 27, 2012',
-      authorImg: `https://randomuser.me/api/portraits/men/4${post.userId}.jpg`,
-      postImg: images[post.userId - 1],
+      authorImg: `https://randomuser.me/api/portraits/women/4${post.id}.jpg`,
+      postImg: images[post.id - 1],
     };
   };
 
