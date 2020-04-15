@@ -13,7 +13,7 @@ import NavBar from './components/NavBar/NavBar';
 
 import './App.css';
 
-const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
+const postsUrl = 'https://ds-jsonplaceholder-api.herokuapp.com/posts';
 // eslint-disable-next-line
 const imgAPIURL = 'https://source.unsplash.com/random/800x600';
 
@@ -42,7 +42,7 @@ class App extends React.Component {
     this.setState({ posts:
       [
         {
-          id: posts[0].id,
+          id: posts[0]._id,
           author: authors[0],
           title: posts[0].title.substring(0, 8),
           body: posts[0].body.substring(0, 100) + '...',
@@ -50,7 +50,7 @@ class App extends React.Component {
           category: 'Science',
         },
         {
-          id: posts[1].id,
+          id: posts[1]._id,
           author: authors[1],
           title: posts[1].title.substring(0, 12),
           body: posts[1].body.substring(0, 100) + '...',
@@ -58,7 +58,7 @@ class App extends React.Component {
           category: 'Literature',
         },
         {
-          id: posts[2].id,
+          id: posts[2]._id,
           author: authors[2],
           title: posts[2].title.substring(0, 5),
           body: posts[2].body.substring(0, 100) + '...',
