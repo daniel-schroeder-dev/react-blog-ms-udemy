@@ -13,6 +13,9 @@ function NavBar(props) {
         <li className="nav-bar__nav-item">
           <NavLink className="nav-bar__nav-link" to="/posts" exact>Blog</NavLink>
         </li>
+        <li className="nav-bar__nav-item">
+          <NavLink className="nav-bar__nav-link" to="/posts/new" exact>Create Post</NavLink>
+        </li>
       </ul>
     </nav>
   );
