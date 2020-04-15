@@ -12,9 +12,7 @@ function BlogSubLayout(props) {
 
   return (
     <Switch>
-      <Route path={`${match.path}/all`}>
-        <Redirect to={match.path} />
-      </Route>
+      <Redirect from={`${match.path}/all`} to={match.path} />
       <Route path={`${match.path}/:id`}>
         <BlogPage post={props.post} />
       </Route>
