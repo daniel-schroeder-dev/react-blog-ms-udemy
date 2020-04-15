@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './CreatePostPage.css';
 
 function CreatePostPage(props) {
@@ -7,7 +7,8 @@ function CreatePostPage(props) {
   const [userId, setUserId] = useState('');
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [post, setPost] = useState({});
+
+  const history = useHistory();
 
   const handleFormSubmit = e => {
     e.preventDefault();
@@ -23,12 +24,10 @@ function CreatePostPage(props) {
         setUserId('');
         setTitle('');
         setBody('');
-        setPost(post);
+        history.push(`/posts/${post._id}`);
       })
       .catch(console.error);
   };
-
-  if (post._id) return <Redirect to={`/posts/${post._id}`} />;
 
   return (
     <div className="create-post-page">
