@@ -5,7 +5,10 @@ import cupcakes from './assets/cupcakes.jpeg';
 import doctor from './assets/doctor.jpeg';
 import elf from './assets/elf.jpeg';
 
-import BlogSubLayout from './layouts/BlogSubLayout/BlogSubLayout'
+/* eslint-disable import/first */
+// import loadable from '@loadable/component';
+// const BlogSubLayout = loadable(() => import('./layouts/BlogSubLayout/BlogSubLayout'));
+import BlogSubLayout from './layouts/BlogSubLayout/BlogSubLayout';
 
 import HomePage from './pages/HomePage/HomePage';
 
