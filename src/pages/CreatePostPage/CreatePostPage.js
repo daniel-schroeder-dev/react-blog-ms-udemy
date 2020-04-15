@@ -20,6 +20,9 @@ function CreatePostPage(props) {
     })
       .then(response => response.json())
       .then(post => {
+        setUserId('');
+        setTitle('');
+        setBody('');
         setPost(post);
       })
       .catch(console.error);
