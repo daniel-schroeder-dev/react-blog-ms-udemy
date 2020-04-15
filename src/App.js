@@ -85,6 +85,9 @@ class App extends React.Component {
               handleLoadPost={this.handleLoadPost}
               />
           </Route>
+          <Route>
+            <div>404 not found</div>
+          </Route>
         </Switch>
       </main>
     );  

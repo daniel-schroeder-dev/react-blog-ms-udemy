@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 
 import BlogsPage from '../../pages/BlogsPage/BlogsPage';
 import BlogPage from '../../pages/BlogPage/BlogPage';
@@ -12,6 +12,9 @@ function BlogSubLayout(props) {
 
   return (
     <Switch>
+      <Route path={`${match.path}/all`}>
+        <Redirect to={match.path} />
+      </Route>
       <Route path={`${match.path}/:id`}>
         <BlogPage post={props.post} />
       </Route>
