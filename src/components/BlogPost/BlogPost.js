@@ -1,4 +1,6 @@
 import React from 'react';
+import { useRouteMatch } from 'react-router-dom';
+
 import './BlogPost.css';
 
 // title: post.title,
@@ -10,6 +12,12 @@ import './BlogPost.css';
 // postImg: doctor,
 
 function BlogPost(props) {
+
+  const match = useRouteMatch();
+
+  console.log(match);
+
+
   return (
     <div className="blog-post">
       <h2 className="blog-post__title">{props.title}</h2>

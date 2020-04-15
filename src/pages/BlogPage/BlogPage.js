@@ -47,7 +47,7 @@ function BlogPage(props) {
 
   return (
     <div className="blog-page">
-      { post ? <BlogPost {...post} /> : null }
+      { post.title ? <BlogPost {...post} /> : null }
     </div>
   );
 }
