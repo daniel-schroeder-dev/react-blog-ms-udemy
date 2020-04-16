@@ -9,7 +9,6 @@ import cupcakes from '../../assets/cupcakes.jpeg';
 import doctor from '../../assets/doctor.jpeg';
 import elf from '../../assets/elf.jpeg';
 
-
 import './BlogSubLayout.css';
 
 const postsUrl = 'https://ds-jsonplaceholder-api.herokuapp.com/posts';

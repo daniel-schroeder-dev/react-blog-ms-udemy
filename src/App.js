@@ -19,9 +19,7 @@ class App extends React.Component {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          <Route path="/posts">
-            <BlogSubLayout />
-          </Route>
+          <Route path="/posts" component={BlogSubLayout} />
           <Route>
             <div>404 not found</div>
           </Route>
